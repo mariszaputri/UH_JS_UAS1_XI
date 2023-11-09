@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perulangan Anak Ayam</title>
+</head>
+<body>
+    <h1>Perulangan Anak Ayam</h1>
+    
+    <button onclick="singAnakAyam()">Mulai Nyanyi</button>
+
+    <p id="songLyrics"></p>
+
+    <script>
+        function singAnakAyam() {
+            let lyrics = '';
+            for (let i = 10; i >= 1; i--) {
+                lyrics += `Anak ayam turun ${i}, mati satu tinggal ${i - 1}<br>`;
+            }
+            document.getElementById("songLyrics").innerHTML = lyrics;
+        }
+    </script>
+</body>
+</html>

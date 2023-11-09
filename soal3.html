@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pembelian Aksesoris</title>
+</head>
+<body>
+    <h1>Pembelian Barang Aksesoris</h1>
+    
+    <form id="purchaseForm">
+        <label for="usb">USB (Harga: 20,000)</label>
+        <input type="number" id="usb" name="usb" min="0"><br>
+
+        <label for="memori">Memori (Harga: 50,000)</label>
+        <input type="number" id="memori" name="memori" min="0"><br>
+
+        <label for="speaker">Speaker (Harga: 20,000)</label>
+        <input type="number" id="speaker" name="speaker" min="0"><br>
+
+        <button type="button" onclick="calculateTotal()">Hitung Total Harga</button>
+    </form>
+
+    <p id="totalPrice">Total Harga: </p>
+
+    <script>
+        function calculateTotal() {
+            const usbPrice = 20000;
+            const memoriPrice = 50000;
+            const speakerPrice = 20000;
+
+            const usbQuantity = parseInt(document.getElementById("usb").value) || 0;
+            const memoriQuantity = parseInt(document.getElementById("memori").value) || 0;
+            const speakerQuantity = parseInt(document.getElementById("speaker").value) || 0;
+
+            const totalPrice = (usbPrice * usbQuantity) + (memoriPrice * memoriQuantity) + (speakerPrice * speakerQuantity);
+
+            document.getElementById("totalPrice").textContent = "Total Harga: " + totalPrice;
+        }
+    </script>
+</body>
+</html>

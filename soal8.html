@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pengecekan Tahun Kabisat</title>
+</head>
+<body>
+    <h1>Pengecekan Tahun Kabisat</h1>
+
+    <script>
+        // Menggunakan prompt untuk memasukkan tahun yang ingin diperiksa
+        const tahun = parseInt(prompt("Masukkan tahun yang ingin diperiksa:") || 0);
+
+        // Menentukan apakah tahun adalah tahun kabisat
+        if (tahun % 4 === 0) {
+            document.write(`Tahun ${tahun} merupakan tahun kabisat`);
+        } else {
+            document.write(`Tahun ${tahun} bukan tahun kabisat`);
+        }
+    </script>
+</body>
+</html>

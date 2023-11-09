@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator Kembalian</title>
+</head>
+<body>
+    <h1>Kalkulator Kembalian</h1>
+
+    <script>
+        const hargaBarang = parseFloat(prompt("Masukkan harga barang:") || 0);
+
+        const jumlahUang = parseFloat(prompt("Masukkan jumlah uang yang dibayarkan:") || 0);
+
+        const kembalian = jumlahUang - hargaBarang;
+
+        if (kembalian >= 0) {
+            document.write(`Kembalian yang harus diberikan: ${kembalian} Rupiah`);
+        } else {
+            document.write("Uang yang dibayarkan kurang. Silakan bayar dengan nominal yang lebih besar.");
+        }
+    </script>
+</body>
+</html>

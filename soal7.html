@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pemesanan Makanan dan Minuman</title>
+</head>
+<body>
+    <h1>Pemesanan Makanan dan Minuman</h1>
+
+    <script>
+        const hargaMakanan = 10000; 
+        const hargaMinuman = 5000; 
+
+        const jumlahMakanan = parseInt(prompt("Masukkan jumlah makanan yang ingin dipesan:") || 0);
+        const jumlahMinuman = parseInt(prompt("Masukkan jumlah minuman yang ingin dipesan:") || 0);
+
+        const totalHarga = (hargaMakanan * jumlahMakanan) + (hargaMinuman * jumlahMinuman);
+
+        document.write(`Total Harga: ${totalHarga} Rupiah`);
+    </script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keliling Trapesium</title>
+</head>
+<body>
+    <h1>Keliling Trapesium Sama Kaki</h1>
+    
+    <form id="trapeziumForm">
+        <label for="sideA">Panjang Sisi a:</label>
+        <input type="number" id="sideA" name="sideA"><br>
+
+        <label for="sideB">Panjang Sisi b:</label>
+        <input type="number" id="sideB" name="sideB"><br>
+
+        <label for="sideC">Panjang Sisi c:</label>
+        <input type="number" id="sideC" name="sideC"><br>
+
+        <label for="sideD">Panjang Sisi d:</label>
+        <input type="number" id="sideD" name="sideD"><br>
+
+        <button type="button" onclick="calculatePerimeter()">Hitung Keliling</button>
+    </form>
+
+    <p id="perimeterResult">Keliling Trapesium: </p>
+
+    <script>
+        function calculatePerimeter() {
+            const sideA = parseFloat(document.getElementById("sideA").value) || 0;
+            const sideB = parseFloat(document.getElementById("sideB").value) || 0;
+            const sideC = parseFloat(document.getElementById("sideC").value) || 0;
+            const sideD = parseFloat(document.getElementById("sideD").value) || 0;
+
+            const perimeter = sideA + sideB + sideC + sideD;
+
+            document.getElementById("perimeterResult").textContent = "Keliling Trapesium: " + perimeter;
+        }
+    </script>
+</body>
+</html>
